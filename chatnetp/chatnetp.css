@@ -1,0 +1,405 @@
+.box1 {
+  box-sizing: border-box;
+  position: relative;
+}
+.box2 {
+  box-sizing: border-box;
+  position: relative;
+}
+.box3 {
+  box-sizing: border-box;
+  position: relative;
+}
+.box1, .box2, .box3, .box4, .disco {
+    float: left;
+    width: 31.3%;
+    margin: 1%;
+    padding:0.5em
+}
+
+.box1::before, .box1::after, .box2::before, .box2::after, .box3::before, .box3::after{
+    content: '';
+	width: 15px;
+	height: 100%;
+	position: absolute;
+}
+
+.box1::before{
+    border-left: solid 1px #1f811f;
+	border-top: solid 1px #1f811f;
+	border-bottom: solid 1px #1f811f;
+	top: 0;
+	left: 0;
+}
+.box2::before{
+    border-left: solid 1px #3976d8;
+	border-top: solid 1px #3976d8;
+	border-bottom: solid 1px #3976d8;
+    top: 0;
+	left: 0;
+}
+.box3::before{
+    border-left: solid 1px #7040B0;
+	border-top: solid 1px #7040B0;
+	border-bottom: solid 1px #7040B0;
+    top: 0;
+	left: 0;
+}
+.box1::after{
+    border-right: solid 1px #1f811f;
+	border-top: solid 1px #1f811f;
+	border-bottom: solid 1px #1f811f;
+	top: 0;
+	right: 0;
+}
+.box2::after{
+    border-right: solid 1px #3976d8;
+	border-top: solid 1px #3976d8;
+	border-bottom: solid 1px #3976d8;
+	top: 0;
+	right: 0;
+}
+.box3::after{
+    border-right: solid 1px #7040B0;
+	border-top: solid 1px #7040B0;
+	border-bottom: solid 1px #7040B0;
+	top: 0;
+	right: 0;
+}
+
+
+
+.headbox1 {
+  box-sizing: border-box;
+}
+.headbox2 {
+  box-sizing: border-box;
+}
+.headbox3 {
+  box-sizing: border-box;
+}
+.headbox1, .headbox2, .headbox3 {
+    float: left;
+    width: 31.3%;
+    margin: 1%;
+    padding:0.5em;
+    position: relative;
+    display:inline-block;
+}
+.title1, .title2, .title3{
+    color:#262626;
+    text-align:center;
+    position: relative;
+    display:inline-block;
+    padding: 0 20%;
+} 
+.title1{
+    text-shadow:-3px 3px #c0c0c0;
+}
+.title2{
+    text-shadow:0px 4px #c0c0c0;
+}
+.title3{
+    text-shadow:3px 3px #c0c0c0;
+}
+
+.title1::before, .title1::after, .title2::before, .title2::after, .title3::before, .title3::after{
+    content: '';
+    position: absolute;
+    top: 40%;
+    display: inline-block;
+    width: 10%;
+    height: 4px;
+    background-color: #444;
+}
+.title1::before, .title2::before, .title3::before{
+    left:0;
+}
+.title1::after, .title2::after, .title3::after{
+    right:0;
+}
+
+
+html{
+    height:100%;
+    background-color: #fffafa;
+    background-image:
+      radial-gradient(#7bded9 5%, transparent 10%),
+      radial-gradient(#7bded9 5%, transparent 10%);
+    background-size: 30px 30px;
+    background-position: 0 0, 60px 60px;
+    font: 1.0em "游ゴシック", "Noto Sans";
+    
+}
+.midtextdrive {
+    background-image: linear-gradient(90deg, rgba(152,251,152, 0.4), rgba(152,251,152,0.4));
+    position: relative;
+    display: inline-block;
+    padding: 0 20%;
+}
+
+.midtextdrive::before, .midtextdrive::after {
+    content: '';
+    position: absolute;
+    top: 40%;
+    display: inline-block;
+    width: 10%;
+    height: 4px;
+    background-color: #444;
+}
+
+.midtextdrive::before {
+    left:0;
+}
+
+.midtextdrive::after {
+    right:0;
+}
+
+
+
+.img{
+    vertical-align: middle;
+    width:6%;
+    height:6%;
+}
+.img2{
+    vertical-align: middle;
+    width:5%;
+    height:5%;
+}
+
+.drive {
+    position: relative;
+    max-width:85%;
+    max-height:100%;
+    font-size:20px;
+    font-weight:bold;
+    text-decoration:none;
+    display:block;
+    text-align:center;
+    padding:4%;
+    background-image: linear-gradient(90deg, rgba(152,251,152, 0.4), rgba(152,251,152,0.4));
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 0 70%;
+    transition: all 0.5s ease;
+    color: #005000;
+}
+
+.drive::before, .drive::after {
+    content: '';
+    position: absolute;
+    width:10px;
+    height:20px;
+    display: inline-block;
+}
+    
+.drive::before{
+    border-left: solid 4px #444;
+    border-top: solid 4px #444;
+    top:0;
+    left:0%; 
+}
+
+.drive::after{
+    border-right: solid 4px #444;
+    border-bottom: solid 4px #444;
+    bottom:0;
+    right:0%;
+}
+
+.drive:hover {
+    background-size: 100% 70%;
+    color:#1c751c;
+} 
+
+.google2{
+    width:15%;
+    font-size:20px;
+    font-weight:bold;
+    display:block;
+    text-align:center;
+    padding:5px;
+    color:#fff;
+    background-color: #3976d8 ;
+    border-radius:5px;
+    text-align: center;
+}
+
+.midtextgoogle {
+    color: black;
+    background-image: linear-gradient(90deg, rgba(57, 118, 216, 0.3), rgba(57, 118, 216, 0.3));
+    position: relative;
+    display: inline-block;
+    padding: 0 20%;
+}
+
+.midtextgoogle::before, .midtextgoogle::after {
+    content: '';
+    position: absolute;
+    top: 40%;
+    display: inline-block;
+    width: 10%;
+    height: 4px;
+    background-color: #444;
+}
+
+.midtextgoogle::before {
+    left:0;
+}
+
+.midtextgoogle::after {
+    right:0;
+}
+
+.google {
+    position: relative;
+    max-width:85%;
+    max-height:100%;
+    font-size:20px;
+    font-weight:bold;
+    text-decoration:none;
+    display:block;
+    text-align:center;
+    padding:4%;
+    background-image: linear-gradient(90deg, rgba(57, 118, 216, 0.3), rgba(57, 118, 216, 0.3));
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 0 70%;
+    transition: all 0.5s ease;
+    color: 		#191970;
+}
+
+.google::before, .google::after {
+    content: '';
+    position: absolute;
+    width:10px;
+    height:20px;
+    display: inline-block;
+}
+    
+.google::before{
+    border-left: solid 4px #444;
+    border-top: solid 4px #444;
+    top:0;
+    left:0%; 
+}
+
+.google::after{
+    border-right: solid 4px #444;
+    border-bottom: solid 4px #444;
+    bottom:0;
+    right:0%;
+}
+
+.google:hover {
+    background-size: 100% 70%;
+    color: #0000FF;
+} 
+
+.midtextother {
+    background-image: linear-gradient(90deg, rgba(128, 0, 128, 0.3), rgba(128, 0, 128, 0.3));
+    position: relative;
+    display: inline-block;
+    padding: 0 20%;
+}
+
+.midtextother::before, .midtextother::after {
+    content: '';
+    position: absolute;
+    top: 40%;
+    display: inline-block;
+    width: 10%;
+    height: 4px;
+    background-color: #444;
+}
+
+.midtextother::before {
+    left:0;
+}
+
+.midtextother::after {
+    right:0;
+}
+
+.other {
+    position: relative;
+    max-width:85%;
+    max-height:100%;
+    font-size:20px;
+    font-weight:bold;
+    text-decoration:none;
+    display:block;
+    text-align:center;
+    padding:4%;
+    background-image: linear-gradient(90deg, rgba(128, 0, 128, 0.3), rgba(128, 0, 128, 0.3));
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 0 70%;
+    transition: all 0.5s ease;
+    color: #7d00b3;
+}
+
+.other::before, .other::after {
+    content: '';
+    position: absolute;
+    width:10px;
+    height:20px;
+    display: inline-block;
+}
+    
+.other::before{
+    border-left: solid 4px #444;
+    border-top: solid 4px #444;
+    top:0;
+    left:0%; 
+}
+
+.other::after{
+    border-right: solid 4px #444;
+    border-bottom: solid 4px #444;
+    bottom:0;
+    right:0%;
+}
+
+.other:hover {
+    background-size: 100% 70%;
+    color:#9932CC;
+} 
+
+      
+
+@media (prefers-color-scheme: dark) {
+}
+
+@media (max-width: 720px){
+    
+.headbox1{
+    display:none;
+}
+.headbox2{
+    width:100%;
+}
+
+.headbox3{
+    display:none;
+}
+
+.box1 {
+  box-sizing: border-box;
+}
+.box2 {
+  box-sizing: border-box;
+}
+.box3 {
+  box-sizing: border-box;
+}
+.box1, .box2, .box3 {
+    float: none;
+    width: 90%;
+}
+html{
+    height:auto;
+}
+}

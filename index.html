@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="chatnetp/chatnetp.css">
+        <script type="text/javascript" src="chatnetp/chatnetp.js"></script>
+        <meta charset="UTF-8">
+        <title>CHaTNetPortal</title>
+        <link rel=”icon” href="chatnetp/a.ico">
+        <link rel="shortcut icon" href="chatnetp/a.ico">
+    </head>
+    <header><center>
+        <hr>
+        <div class="headbox1">
+            <div class="inheadbox1">
+                <h2 class="title1" id="viewtime">TIME</h2>
+            </div>
+            <script type="text/javascript">
+                function convert2digit(num){
+                    var ret;
+                    if( num < 10 ) { ret = "0" + num; }
+                    else { ret = num; }
+                    return ret;
+                }
+                function showClock1() {
+                    var nowTime = new Date();
+                    var nowHour = convert2digit(nowTime.getHours());
+                    var nowMin  = convert2digit(nowTime.getMinutes());
+                    var msg =nowHour + ":" + nowMin;
+                    document.getElementById("viewtime").innerHTML = msg;
+                }
+                setInterval('showClock1()',1000);
+            </script>
+        </div>
+
+        <div class="headbox2">
+            <h2 class="title2">CHaTNetPortal</h2>
+        </div>
+        <div class="headbox3">
+            <h2 class="title3" id="viewdate">DATE</h2>
+            <script type="text/javascript">
+                document.getElementById("viewdate").innerHTML = getNowTime2();
+                function getNowTime2() {
+	                var now = new Date();
+	                var mon = now.getMonth()+1; //month+１
+	                var day = now.getDate();//day
+	                var you = now.getDay(); //youbi
+	            var youbi = new Array("日","月","火","水","木","金","土");
+	            var date =mon + "/" + day + " (" + youbi[you] +  ")";
+	            return date;
+            }
+            </script>
+        </div>
+        </center>
+        </header>
+    
+    <body><center>
+        
+        <div class="box1"><h3 class="midtextdrive">ドライブ関連</h3>
+            <a class="drive" target="_blank" type=“button” href="https://drive.google.com/drive/u/0/my-drive"><img class="img" src="chatnetp/pic/driv.png">　マイドライブ</a><br>
+            <a class="drive" target="_blank" type=“button” href="https://drive.google.com/drive/folders/0AOzDysGjLU_4Uk9PVA">共有ドライブ</a><br>
+            <a class="drive" target="_blank" type=“button” href="https://drive.google.com/drive/u/0/folders/1m0Oh_Tu7qrpAHAYmj3cjx4w4GxXD2uaE">10年生フォルダ</a><br>
+            <a class="drive" target="_blank" type=“button” href="https://drive.google.com/drive/u/0/folders/1gF6PuPjPsEDN_Y7UliW26cbCc7ldh6jP">テスト関係フォルダ</a>
+        </div>
+        
+        <div class="box2"><h3 class="midtextgoogle">Google関連</h3>
+            <a class="google" target="_blank" type="button" href="https://classroom.google.com/u/0/h"><img class="img" src="chatnetp/pic/class.png">　クラスルーム</a><br>
+            <a class="google" target="_blank" type=“button” href="https://mail.google.com/mail/u/0/?tab=om#inbox"><img class="img" src="chatnetp/pic/gmail.png">　Gmail受信トレイ</a><br>
+            <a class="google" target="_blank" type=“button” href="https://meet.google.com/?pli=0&authuser=0"><img class="img" src="chatnetp/pic/meet.png">　Meet</a><br>
+            <a class="google" target="_blank" type=“button” href="https://calendar.google.com/"><img class="img" src="chatnetp/pic/cale.png">　カレンダー</a>
+        </div>
+        
+        <div class="box3"><h3 class="midtextother">その他</h3>
+            <a class="other" target="_blank" type=“button” href="https://docs.google.com/presentation/"><img class="img" src="chatnetp/pic/slide.png">　スライド</a><br>
+            <a class="other" target="_blank" type=“button” href="https://docs.google.com/document/"><img class="img2" src="chatnetp/pic/docs.png">　ドキュメント</a><br>
+            <a class="other" target="_blank" type=“button” href="https://docs.google.com/spreadsheets/"><img class="img2" src="chatnetp/pic/spread.png">　スプレッドシート</a><br>
+            <a class="other" target="_blank" type=“button” href="https://platform.classi.jp/"><img class="img" src="chatnetp/pic/classi.png">　Classi</a>
+        </div>
+        
+        </center></body>
+    <footer><center>
+        <script type="text/javascript">
+   function gate() {
+      var UserInput = prompt("","");
+      const passurl ="home" + UserInput + ".html";
+       window.open(passurl, '_blank')
+   }
+</script>
+        <input type="button" class="google2" value="Tools" onclick="gate();">
+        <br>
+        
+        <a>Ver.3.0「ノート」アップデート<br>12/30 Release</a>
+        <hr>
+    </center></footer>
+</html>
